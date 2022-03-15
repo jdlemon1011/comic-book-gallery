@@ -13,6 +13,11 @@ if (!app.Environment.IsDevelopment())
 	app.UseHsts();
 }
 
+app.MapControllerRoute(
+	name: "ComicBooks",
+	pattern: "{controller=ComicBooks}/{action=Detail}"
+);
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
